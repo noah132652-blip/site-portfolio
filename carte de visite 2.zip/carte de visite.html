@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carte de visite – Noah CHRISTOPHE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header>
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+        <div>
+          <h1 style="margin:0">CHRISTOPHE Noah</h1>
+          <p style="margin:.25rem 0 0; color: var(--muted);">Étudiant en BUT MMI</p>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:.5rem;">
+          <label style="display:flex; align-items:center; gap:.4rem; margin:0;">
+            <input type="checkbox" id="themeToggle" />
+            <span aria-hidden="true">🌙☀️</span>
+            <span class="sr-only">Basculer thème clair/sombre</span>
+          </label>
+
+          <button id="burger" class="btn" aria-expanded="false" aria-controls="nav">
+            <span class="sr-only">Ouvrir le menu</span> ☰
+          </button>
+        </div>
+
+        <nav id="nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="carte de visite.html" aria-current="page">À propos</a></li>
+            <li><a href="Projet.html">Projets</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <div class="container">
+        <section id="apropos" aria-labelledby="titre-apropos">
+          <h2 id="titre-apropos">À propos</h2>
+          <figure>
+            <img src="img/20241102_190709.jpg" alt="Portrait de Noah CHRISTOPHE" width="240" height="240" />
+            <figcaption>Portrait</figcaption>
+          </figure>
+          <p>
+            Passionné par le montage, je maîtrise la suite Adobe depuis quelques années. J’aime jouer aux jeux vidéos
+            et je souhaite terminer mes 3 années de BUT MMI et travailler dans l’audiovisuel ou en tant que motion designer.
+          </p>
+        </section>
+
+        <section id="competences" aria-labelledby="titre-competences">
+          <h2 id="titre-competences">Compétences</h2>
+          <ul>
+            <li>Suite Adobe (AE, PS, PR)</li>
+            <li>Animation 2D</li>
+            <li>Débutant en motion design</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <small>© <span id="annee"></span> Noah — BUT MMI</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('annee').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
